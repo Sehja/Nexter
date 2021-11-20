@@ -86,7 +86,7 @@ body {
   position: fixed;
   padding: 1.7rem .6rem;
   z-index: 300;
-  top: 20px;
+  top: 5px;
   left: 12px; }
 
 .nav-btn {
@@ -137,7 +137,7 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    padding: 13rem 2rem 7rem 5rem;
+    padding: 10rem 2rem 7rem 5rem;
     justify-content: space-between;
     transform: translateX(-100%);
     transition: all .6s;
@@ -145,7 +145,7 @@ body {
   .burger__item {
     text-decoration: none;
     color: #fff;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     text-transform: uppercase;
     font-weight: 300;
     font-family: "Josefin Sans", sans-serif;
