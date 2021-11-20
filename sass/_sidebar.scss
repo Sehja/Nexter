@@ -2,4 +2,117 @@
     background-color: $color-primary;
     grid-column: sidebar-start/sidebar-end;
     grid-row: 1/-1;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.checkbox {
+    display: none;
+}
+
+.label {
+    cursor: pointer;
+    display: block;
+    margin-top: 2rem;
+    position: fixed;
+    padding: 1.7rem .6rem;
+    z-index: 300;
+    top: 20px;
+    left: 12px;
+}
+
+.nav-btn {
+    border: none;
+    width: 4.5rem;
+    height: 2.5px;
+    background-color: #fff;
+    display: block;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 4.5rem;
+        height: 2.5px;
+        background-color: #fff;
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+    }
+
+    &::before {
+        transform: translateY(1.5rem);
+    }
+
+    &::after {
+        transform: translateY(-1.4rem);
+    }
+}
+
+.checkbox:checked+.label .nav-btn::after {
+    transform: rotate(-220deg);
+    top: 0;
+    box-shadow: 1px 1px 30px #000;
+}
+
+.checkbox:checked+.label .nav-btn::before {
+    transform: rotate(220deg);
+    bottom: 0;
+    box-shadow: 1px 1px 30px #000;
+}
+
+.checkbox:checked+.label .nav-btn {
+    background: transparent;
+}
+
+.burger {
+    position: relative;
+
+    &__list {
+        width: 40vw;
+        background-color: rgba($color-primary, .9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30vw;
+        height: 100vh;
+        z-index: 200;
+        position: fixed;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        padding: 13rem 2rem 7rem 5rem;
+        justify-content: space-between;
+        transform: translateX(-100%);
+        transition: all .6s;
+        border-right: 5px solid $color-primary-dark;
+    }
+
+    &__item {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2.1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-family: $font-display;
+        transition: all .3s;
+        display: block;
+        text-shadow: 1px 1px 10px #000;
+
+        &:hover {
+            transform: translate(2px);
+            text-shadow: 2px 2px 15px #000;
+        }
+    }
+}
+
+.checkbox:checked~.burger__list {
+    transform: translateX(0);
+}
+
+.checkbox:checked .container {
+    filter: blur();
 }
