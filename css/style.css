@@ -23,9 +23,14 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.heading-2, .heading-3, .heading-4 {
+.heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
+
+.heading-1 {
+  color: #f9f7f6;
+  font-size: 4.5rem;
+  line-height: 1; }
 
 .heading-2 {
   font-size: 4rem;
@@ -38,7 +43,8 @@ body {
 
 .heading-3 {
   font-size: 1.6rem;
-  color: #c69963; }
+  color: #c69963;
+  text-transform: uppercase; }
 
 .heading-4 {
   font-size: 1.9rem; }
@@ -51,6 +57,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
   padding: 1.8rem 3rem;
   background-color: #c69963;
   border: none;
@@ -165,7 +172,51 @@ body {
 .header {
   background-color: #54483A;
   grid-column: full-start / col-end 6;
-  position: relative; }
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-row-gap: 1.5rem;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center; }
+  .header__logo {
+    height: 3rem;
+    justify-self: center; }
+  .header__seenon {
+    color: #aaa;
+    font-size: 1.6rem;
+    text-align: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center; }
+    .header__seenon::before, .header__seenon::after {
+      content: "";
+      height: .8px;
+      display: block;
+      background-color: currentColor; }
+    .header__seenon::before {
+      left: 0; }
+    .header__seenon::after {
+      right: 0; }
+  .header__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(2.5rem, 1fr));
+    grid-template-rows: max-content;
+    grid-column-gap: 3rem;
+    align-items: center;
+    justify-items: center; }
+    .header__seenon-logos img {
+      max-height: 2.5rem;
+      filter: brightness(70%); }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
 
 .realtors {
   background-color: #101d2c;
