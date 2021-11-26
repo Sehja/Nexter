@@ -34,7 +34,7 @@
         &::before,
         &::after {
             content: "";
-            height: .8px;
+            height: 1px;
             display: block;
             background-color: currentColor;
         }
@@ -52,7 +52,6 @@
 
         display: grid;
         grid-template-columns: repeat(4, minmax(2.5rem, 1fr));
-        grid-template-rows: max-content;
         grid-column-gap: 3rem;
         align-items: center;
         justify-items: center;

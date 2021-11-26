@@ -197,7 +197,7 @@ body {
     align-items: center; }
     .header__seenon::before, .header__seenon::after {
       content: "";
-      height: .8px;
+      height: 1px;
       display: block;
       background-color: currentColor; }
     .header__seenon::before {
@@ -207,7 +207,6 @@ body {
   .header__seenon-logos {
     display: grid;
     grid-template-columns: repeat(4, minmax(2.5rem, 1fr));
-    grid-template-rows: max-content;
     grid-column-gap: 3rem;
     align-items: center;
     justify-items: center; }
@@ -220,7 +219,27 @@ body {
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-end 6 / full-end; }
+  grid-column: col-end 6 / full-end;
+  padding: 3rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  grid-row-gap: 2rem; }
+  .realtors__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    align-items: center; }
+  .realtors__img {
+    width: 7rem;
+    display: block;
+    border-radius: 50%; }
+  .realtors__sold {
+    color: #aaa;
+    text-transform: uppercase;
+    margin-top: -3px; }
 
 .features {
   grid-column: center-start / center-end;
