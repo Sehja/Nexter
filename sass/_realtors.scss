@@ -9,6 +9,10 @@
     justify-items: center;
     grid-row-gap: 2rem;
 
+    @media only screen and (max-width: $bp-big) {
+        grid-column: full-start/full-end;
+    }
+
 
     &__list {
         display: grid;
@@ -16,6 +20,16 @@
         grid-column-gap: 2rem;
         grid-row-gap: 5vh;
         align-items: center;
+
+
+        @media only screen and (max-width: $bp-big) {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: min-content max-content;
+        }
+
     }
 
 
