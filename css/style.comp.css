@@ -283,9 +283,6 @@ body {
   grid-gap: 6rem;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   align-items: start; }
-  @media only screen and (max-width: 37.5em) {
-    .features {
-      margin: 7rem 0; } }
 
 .feature {
   display: grid;
