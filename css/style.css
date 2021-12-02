@@ -171,6 +171,11 @@ body {
     transform: translateX(-150%);
     transition: all .6s;
     border-right: 5px solid #B28451; }
+    @media only screen and (max-width: 37.5em) {
+      .burger__list {
+        padding: 10rem 0 10rem;
+        width: 100vw;
+        align-items: center; } }
   .burger__item {
     text-decoration: none;
     color: #fff;

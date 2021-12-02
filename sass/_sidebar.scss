@@ -103,6 +103,12 @@
         transform: translateX(-150%);
         transition: all .6s;
         border-right: 5px solid $color-primary-dark;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 10rem 0 10rem;
+            width: 100vw;
+            align-items: center;
+        }
     }
 
     &__item {
