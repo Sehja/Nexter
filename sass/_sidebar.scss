@@ -121,6 +121,8 @@
         transition: all .3s;
         display: block;
         text-shadow: 1px 1px 10px #000;
+        // animation: moveInRight ease-out 1.8s;
+        // animation-timing-function: cubic-bezier(.87, .39, .14, .91);
 
         &:hover {
             transform: translate(2px);
@@ -131,6 +133,10 @@
 
 .checkbox:checked~.burger__list {
     transform: translateX(0);
+}
+
+.checkbox:checked~.burger__list li {
+    animation: moveInRight ease 1s;
 }
 
 .checkbox:checked .container {

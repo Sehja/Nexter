@@ -14,6 +14,9 @@ html {
   @media only screen and (max-width: 62.5em) {
     html {
       font-size: 45%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -33,6 +36,16 @@ body {
     .container {
       grid-template-rows: 6rem calc(100vh - 6rem) min-content minmax(max-content, 40vw) repeat(3, min-content);
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+  80% {
+    transform: translateX(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -193,6 +206,9 @@ body {
 .checkbox:checked ~ .burger__list {
   transform: translateX(0); }
 
+.checkbox:checked ~ .burger__list li {
+  animation: moveInRight ease 1s; }
+
 .checkbox:checked .container {
   filter: blur(); }
 
@@ -213,6 +229,9 @@ body {
   @media only screen and (max-width: 50em) {
     .header {
       grid-column: full-start/full-end; } }
+  @media only screen and (max-width: 450px) {
+    .header {
+      grid-template-rows: 1fr repeat(2, minmax(6rem, min-content)) 1fr; } }
   .header__logo {
     height: 3rem;
     justify-self: center; }
@@ -247,6 +266,9 @@ body {
   .header__btn {
     align-self: start;
     justify-self: start; }
+    @media only screen and (max-width: 450px) {
+      .header__btn {
+        align-self: center; } }
 
 .realtors {
   background-color: #101d2c;

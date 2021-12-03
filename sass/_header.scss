@@ -20,6 +20,10 @@
         grid-column: full-start/full-end;
     }
 
+    @media only screen and (max-width: 450px) {
+        grid-template-rows: 1fr repeat(2, minmax(6rem, min-content)) 1fr;
+    }
+
     &__logo {
         height: 3rem;
         justify-self: center;
@@ -70,5 +74,10 @@
     &__btn {
         align-self: start;
         justify-self: start;
+
+        @media only screen and (max-width: 450px) {
+            align-self: center;
+        }
+
     }
 }
