@@ -16,7 +16,7 @@ html {
       font-size: 45%; } }
   @media only screen and (max-width: 37.5em) {
     html {
-      font-size: 40%; } }
+      font-size: 44%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -202,6 +202,9 @@ body {
     .burger__item:hover {
       transform: translate(2px);
       text-shadow: 2px 2px 15px #000; }
+    @media only screen and (max-width: 37.5em) {
+      .burger__item {
+        font-size: 2.1rem; } }
 
 .checkbox:checked ~ .burger__list {
   transform: translateX(0); }
